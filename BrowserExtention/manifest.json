@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "BitterPill",
+    "version": "0.1",
+    "description": "Browser extention for being a good person",
+    "icons": {
+        "48": "icons/Cat.png"
+    },
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*"
+    ],
+
+
+    "content_scripts": [{
+        "matches": ["*://*/index.html", "https://www.facebook.com/", "https://www.reddit.com/*"],
+        "js": ["contentscript.js"]
+    }],
+    
+    "browser_action": {
+        "default_icon": "icons/Cat.png",
+        "default_title": "BitterPill"
+    }
+
+    
+}
